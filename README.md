@@ -40,4 +40,46 @@ TDD란?
     설계 개선
     보다 자주 성공한다
 
+##2장 JUnit과 Hamcrest
 
+####2.1 JUnit
+
+    텍스트 픽스처
+    - 매번 동일한 결과를 얻게 도와주는 '기반이 되는 상태나 환경'을 의미
+    - 일반된 테스트 실행환경이라고도 한다
+
+    테스트 케이스와 테스트 메소드
+    - 테스트 케이스는 테스트 작업에 대한 시나리오적인 의미가 더 강함
+    - 테스트 메소드는 JUnit의 메소드를 지칭
+    - 테스트 케이스가 곧 테스트 메소드인 경우가 많기 때문에 혼란 x
+    - JUnit의 기원 http://members.pingnet.ch/gamma/
+
+####2.1.1 JUnit 3
+
+    JUnit 3 규칙
+    1. TestCase를 상속받는다.
+    ex) AccountTest extends TestCase
+    2. 테스트 메소드의 이름은 반드시 test로 시작해야 한다
+    ex) testGetAddress(), testCalculateValue() 등
+
+####2.1.2 JUnit 4
+
+    1. Java 5 애노테이션 지원
+    2. test라는 글자로 method 이름을 시작해야 한다는 제약 해소
+    3. 좀 더 유연한 픽스처
+    4. 예외 테스트
+    5. 시간 제한 테스트
+    6. 테스트 무시
+    7. 배열 지원
+    8. @RunWith(클래스이름.class)
+    9. @SuiteClasses(Class[])
+    10. 파라미터를 이용한 테스트
+
+    ‘New Features and Enhancements J2SE 5.0’(http://java.sun.com/j2se/1.5.0/docs/relnotes/features.html)
+    을 볼 것을 추천한다. 검색으로 찾게 되는 단편적인 지식이 아닌, 좀 더 상세하고도 광범위한 정보를 얻을 수 있다.
+    정 시간이 없다면, 간략화 버전인 ‘J2SE 5.0 in a Nutshell’(http://java.sun.com/developer/technicalArticles/releases/j2se15/)이
+    라도 봐두자.
+
+####2.2 비교표현의 확장: Hamcrest
+
+####2.3 정리
